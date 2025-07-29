@@ -1,0 +1,92 @@
+.tricks {
+    padding-top: 120px;
+    &__container {}
+    &__title {}
+    &__grid {
+        margin-top: 60px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 32px;
+    }
+    &__grid-elem {
+        display: flex;
+        flex-direction: column;
+        border-radius: 12px;
+        overflow: hidden;
+        background-color: #F8F8F8;
+    }
+    &__img {
+        width: 100%;
+        height: 170px;
+        object-fit: cover;
+    }
+    &__grid-elem-title {
+
+    }
+    &__grid-elem-content {
+        padding: 32px 28px 0 28px;
+        flex-grow: 1;
+    }
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        padding-left: 20px;
+    }
+    &__list-elem {}
+    &__btn {
+        padding: 20px 30px;
+        border-radius: 100px;
+        background-color: var(--accent);
+        color: white;
+        font-weight: 500;
+        border: none;
+        box-shadow: 0px 10px 20px -10px #10323D66;
+        cursor: pointer;
+        margin-bottom: 32px;
+        margin-left: 28px;
+        width: fit-content;
+    }
+    &__grid-elem-dark {
+        background-color: var(--accent);
+        border-radius: 12px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        padding: 100px 28px;
+    }
+    &__grid-elem-dark-icon {
+        width: 130px;
+        height: 108px;
+    }
+    &__grid-elem-dark-text {
+        text-align: center;
+        margin-top: 80px;
+        line-height: 28px;
+    }
+    &__grid-elem-dark-social {
+        display: flex;
+        align-items: center;
+        gap: 32px;
+        margin-top: 20px;
+    }
+    &__grid-elem-dark-social-elem {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        color: white;
+        @include any-hover {
+            color: white;
+        }
+    }
+    &__link {
+        width: fit-content;
+    }
+    &__grid-elem-dark-social-icon {
+    }
+    &__grid-elem-dark-social-text {}
+}
