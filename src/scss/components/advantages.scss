@@ -59,3 +59,29 @@
         line-height: 1.5;
     }
 }
+
+@include media($tablet) {
+    .advantages {
+        padding-top: 40px;
+        &__content {
+
+        }
+        &__elem {
+            flex-direction: column;
+            flex-basis: 100%;
+            position: relative;
+        }
+        &__elem-left {
+            display: none;
+        }
+        &__elem-title {
+        }
+        &__footer {
+            margin-top: 24px;
+            border-radius: 12px;
+            flex-direction: column;
+            gap: 24px;
+            padding: 24px;
+        }
+    }
+}

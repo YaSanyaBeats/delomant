@@ -90,3 +90,19 @@
     }
     &__grid-elem-dark-social-text {}
 }
+
+@include media($tablet) {
+    .tricks {
+        padding-top: 40px;
+        &__grid {
+            margin-top: 24px;
+            grid-template-columns: 1fr;
+        }
+        &__grid-elem-dark {
+            padding: 50px 28px;
+        }
+        &__grid-elem-dark-text {
+            margin-top: 20px;
+        }
+    }
+}

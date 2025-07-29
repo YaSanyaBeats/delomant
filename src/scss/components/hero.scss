@@ -5,15 +5,18 @@
     padding-bottom: 50px;
     &__container {}
     &__breadcrumbs {
-        display: flex;
+        display: inline;
     }
     &__breadcrumbs-elem {
         color: white;
+        text-decoration: underline;
         &::after {
             content: '/';
             margin: 0 4px;
         }
-        &_last {}
+        &_last {
+            text-decoration: none;
+        }
         @include any-hover {
             color: white;
         }
@@ -45,8 +48,11 @@
     &__list-elem {}
     &__form {
         margin-top: 52px;
+        max-width: 500px;
     }
-    &__form-text {}
+    &__form-text {
+        font-weight: 600;
+    }
     &__form-include {
         margin-top: 16px;
         height: 172px;
@@ -60,5 +66,40 @@
         height: 100%;
         object-fit: cover;
         border-radius: 12px;
+    }
+    &__input {
+        margin-top: 16px;
+    }
+    &__privacy-text {
+        color: #FFFFFF99 !important;
+        line-height: 1.5;
+        margin-top: -3px;
+    }
+    &__privacy_hero {
+        margin-top: 16px !important;
+    }
+    &__btn {
+        margin-top: 12px;
+        background-color: white !important;
+        color: var(--accent) !important;
+        margin-left: 0 !important;
+    }
+}
+
+.hero .question__privacy-text {
+    color: white;
+}
+
+@include media($tablet) {
+    .hero {
+        &__content {
+            flex-direction: column;
+        }
+        &__btn {
+            width: 100% !important;
+        }
+        &__right {
+            display: none;
+        }
     }
 }
