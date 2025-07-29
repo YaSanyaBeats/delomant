@@ -46,3 +46,45 @@
             max-width: 190px;
 		}
 }
+@include media($tablet) {
+    .about {
+        margin-top: 40px;
+        &__container {
+            gap: 24px;
+            padding: 40px 20px;
+        }
+
+        &__top {
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        &__title {
+           
+        }
+
+        &__text {
+            max-width: 100%;
+        }
+
+        &__bottom {
+            gap: 20px;
+            flex-direction: column;
+        }
+
+        &__card {
+            gap: 15px;
+            max-width: 100%;
+            width: 100%;
+        }
+
+        &__card-title {
+          
+        }
+
+        &__card-description {
+           
+        }
+    }
+
+}
