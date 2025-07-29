@@ -43,7 +43,7 @@ a {
     &_serif {
         font-family: 'Prata', sans-serif;
     }
-    @include media($mobile) {
+    @include media($tablet) {
         &_mobile {
             &_50 {
                 font-size: 50px;

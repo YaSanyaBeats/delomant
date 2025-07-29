@@ -22,7 +22,7 @@
             </div>
         </div>
         <div class = "question__form-content">
-            <div class = "question__form">
+            <div class = "question__form form-block">
                 <div class = "question__form-inputs">
                     <input id = "question-form-name" class = "text_16 question__form-input form__input_white" name = "name_question" type = "text" placeholder="Ваше имя">
                     <input id = "question-form-phone" class = "text_16 question__form-input form__input_white" name = "phone_question" type = "tel" placeholder="+7 (999) 999-99-99">
@@ -32,7 +32,7 @@
                     <span id = "question-checkbox" class = "form-checkbox"></span>
                     <a href = "/politika-konfidencialnosti/" class = "question__privacy-text text_14">Я выражаю согласие на передачу и обработку персональных данных в соответствие с Политикой конфиденциальности *</a>
                 </div>
-                <button id = "question-button" class = "question__form-button text_16" type = "button">Отправить</button>
+                <button id = "question-button" class = "question__form-button text_16 form-btn" type = "button">Отправить</button>
             </div>
         </div>
     </div>
@@ -40,15 +40,18 @@
 <script>
     function initCheckBoxButton()
     {
-        let checkbox = document.getElementById("question-checkbox");
-        let button = document.getElementById("question-button");
-        if(checkbox && button)
-        {
-            checkbox.addEventListener('click', (event) => {
-                checkbox.classList.toggle("active");
-                button.classList.toggle("active");
-            })
-        }
+        let forms = document.querySelectorAll(".form-block");
+        forms.forEach(form => {
+            let checkbox = form.querySelector(".form-checkbox");
+            let button = form.querySelector(".form-btn");
+            if(checkbox && button)
+            {
+                checkbox.addEventListener('click', (event) => {
+                    checkbox.classList.toggle("active");
+                    button.classList.toggle("active");
+                })
+            }
+        });
     }
     document.addEventListener('DOMContentLoaded', (event) => {
         initCheckBoxButton();
