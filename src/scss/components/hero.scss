@@ -1,22 +1,64 @@
 .hero {
     background-color: $accent;
+    color: white;
+    padding-top: 50px;
+    padding-bottom: 50px;
     &__container {}
     &__breadcrumbs {
-        
+        display: flex;
     }
     &__breadcrumbs-elem {
+        color: white;
+        &::after {
+            content: '/';
+            margin: 0 4px;
+        }
         &_last {}
+        @include any-hover {
+            color: white;
+        }
     }
-    &__content {}
-    &__left {}
+    &__content {
+        display: flex;
+        gap: 120px;
+        margin-top: 60px;
+    }
+    &__left {
+        display: flex;
+        flex-direction: column;
+    }
     &__title {}
-    &__subtitle {}
-    &__text {}
-    &__list {}
+    &__subtitle {
+        margin-top: 52px;
+    }
+    &__text {
+        margin-top: 12px;
+        color: #FFFFFF80;
+        line-height: 1.5;
+    }
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        padding-left: 20px;
+    }
     &__list-elem {}
-    &__form {}
+    &__form {
+        margin-top: 52px;
+    }
     &__form-text {}
-    &__form-include {}
-    &__right {}
-    &__img {}
+    &__form-include {
+        margin-top: 16px;
+        height: 172px;
+        background-color: #00000055;
+    }
+    &__right {
+        flex: 0 0 630px;
+    }
+    &__img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 12px;
+    }
 }
