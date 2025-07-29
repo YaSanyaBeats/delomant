@@ -1,0 +1,56 @@
+<section class = "question">
+    <div class = "container question__container">
+        <div class = "question__content">
+            <h2 class = "text_36 text_serif question__title">Задайте вопрос онлайн</h2>
+            <div class = "question__list">
+                <div class = "question__card">
+                    <img src="@img/icons/check-white.svg" class="question__icon">
+                    <span class = "question__card-title text_16">Перезвоним через 15 минут</span>
+                </div>
+                <div class = "question__card">
+                    <img src="@img/icons/check-white.svg" class="question__icon">
+                    <span class = "question__card-title text_16">Проконсультируем по всем вопросам</span>
+                </div>
+                <div class = "question__card">
+                    <img src="@img/icons/check-white.svg" class="question__icon">
+                    <span class = "question__card-title text_16">Индивидуальный подход</span>
+                </div>
+                <div class = "question__card">
+                    <img src="@img/icons/check-white.svg" class="question__icon">
+                    <span class = "question__card-title text_16">Более 20 специалистов в команде</span>
+                </div>
+            </div>
+        </div>
+        <div class = "question__form-content">
+            <div class = "question__form">
+                <div class = "question__form-inputs">
+                    <input id = "question-form-name" class = "text_16 question__form-input form__input_white" name = "name_question" type = "text" placeholder="Ваше имя">
+                    <input id = "question-form-phone" class = "text_16 question__form-input form__input_white" name = "phone_question" type = "tel" placeholder="+7 (999) 999-99-99">
+                    <textarea class = "text_16 question__form-input question__form-textarea form__input_white" name = "comment_question" placeholder="Опишите подробнее ваш вопрос"></textarea>
+                </div>
+                <div class = "question__privacy">
+                    <span id = "question-checkbox" class = "form-checkbox"></span>
+                    <a href = "https://delomant.ru/politika-konfidencialnosti" class = "question__privacy-text text_14">Я выражаю согласие на передачу и обработку персональных данных в соответствие с Политикой конфиденциальности *</a>
+                </div>
+                <button id = "question-button" class = "question__form-button text_16" type = "button">Отправить</button>
+            </div>
+        </div>
+    </div>
+</section>
+<script>
+    function initCheckBoxButton()
+    {
+        let checkbox = document.getElementById("question-checkbox");
+        let button = document.getElementById("question-button");
+        if(checkbox && button)
+        {
+            checkbox.addEventListener('click', (event) => {
+                checkbox.classList.toggle("active");
+                button.classList.toggle("active");
+            })
+        }
+    }
+    document.addEventListener('DOMContentLoaded', (event) => {
+        initCheckBoxButton();
+    })
+</script>
